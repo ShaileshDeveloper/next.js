@@ -38,9 +38,9 @@ function ListingPage() {
   return (
     <div className={styles.flex}>
         {
-          productDetails?.map(product => <>
-            <ProductCard product={product}/>
-          </>)
+          productDetails?.map(product =>
+            <ProductCard key={product.id} product={product}/>
+         )
         }
     </div>
   )

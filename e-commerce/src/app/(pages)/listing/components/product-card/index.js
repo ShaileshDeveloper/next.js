@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from "./styles.module.css"
+
+
 function ProductCard({product}) {
   const productName = product?.product_details?.product_name;
   return (
