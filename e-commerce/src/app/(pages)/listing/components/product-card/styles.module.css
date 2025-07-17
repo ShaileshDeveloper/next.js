@@ -1,0 +1,13 @@
+.cardContainer {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.flex {
+    display: flex;
+}
+
+.mr10{
+    margin-right: 10px;
+}
