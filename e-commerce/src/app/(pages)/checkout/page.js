@@ -1,15 +1,17 @@
 
 "use client"
-import React, { createContext, useContext, useState } from 'react'
-import ProductCard from "./components/product-card";
+import React , { createContext, useContext, useState } from 'react'
 import styles from "./page.module.css";
 import { useTheme } from '@/app/context/theme-context';
-import Link from "next/link";
 
-function ListingPage() {
+function CheckoutPage() {
+
 
   const { theme, toggleTheme } = useTheme();
 
+
+  const backgroundColor = theme === "dark" ? "#121212" : "#ffffff";
+  const textColor = theme === "dark" ? "#ffffff" : "#000000";
   const productDetails = [
     {
       id: 1,
@@ -42,26 +44,16 @@ function ListingPage() {
       }
     }
   ]
-
-  const backgroundColor = theme === "dark" ? "#121212" : "#ffffff";
-  const textColor = theme === "dark" ? "#ffffff" : "#000000";
   return (
-    <div style={{ backgroundColor, color: textColor, minHeight: "100vh", padding: "2rem" }}>
-      <Link href="/checkout">Go to Checkout Page</Link>
-
+        <div style={{ backgroundColor, color: textColor, minHeight: "100vh", padding: "2rem" }}>
       <button onClick={toggleTheme} style={{ marginBottom: "1rem" }}>
         Toggle Theme
       </button>
       <div className={styles.flex}>
-        {
-          productDetails?.map(product =>
-            <ProductCard key={product.id} product={product} />
-          )
-        }
+       yfuds fubsdubfusd
       </div>
     </div>
-
   )
 }
 
-export default ListingPage
+export default CheckoutPage
